@@ -1,0 +1,769 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">    
+<title>RuPaul Drankin Gayme</title>
+<style>
+/* CSS Document */
+/* Reset browser default styles: */
+html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, pre, code, address, variable, form, fieldset, blockquote {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  list-style: none;
+}
+
+/* border-box so that border widths aren't added to the total width of the element: */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* Clearfix to make floated elements behave correctly: */
+  .cf:before, .cf:after { content: ""; display: table; }
+  .cf:after { clear: both; }
+  .cf { zoom: 1; }
+
+/* In order for the percentage heights to work we need this: */
+html, body { height:100%; 
+	}   
+    
+body {
+	background-color: #fdb2ce;}
+	
+	
+	
+    .box1{
+        background-color: #fdb2ce;
+        height:100vh;
+        overflow: hidden;
+    }    
+    
+    .box2{
+        background-color: #5662ff;
+        height:100vh;
+        position: relative;
+        overflow: hidden;
+    }      
+
+    .title{
+        background-color: transparent;
+        width:auto;
+        float:left;
+        height: auto;
+        
+        position: relative;
+        top: 50%;
+        left: 50%;
+        z-index: 100;
+        margin-right: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+	.orange_flower{
+        width:auto;
+        height: auto;
+		position: absolute;
+        top: 15%;
+        left: 20%;	 
+
+	}
+	
+	.green_cloud{
+        width:auto;
+        height: auto;
+		position: absolute;
+        top: 60%;
+        left: 60%;	
+	}
+	
+	
+	
+	
+	
+		
+:root {
+  --width: 160px;
+  --x-speed: 4s;
+  --y-speed: 3s;
+    
+}
+
+    .circle-wrap{
+        position: absolute;
+        top:0;
+        left:0;
+        z-index: 101;
+        animation:spin 4s linear infinite;
+
+    }
+    
+            @keyframes spin { 
+            100% { 
+                transform: rotate(180deg);
+        } 
+    }
+    
+    .circle { 
+        border-radius:400px;
+        width: var(--width);
+        height: var(--width);
+        background-color: #fffc00;
+        position: absolute;
+        top:0;
+        left:0;
+        z-index: ;
+        display: ;
+}
+    
+        .leye{
+            background-color: #5662ff;
+            width: 14px;
+            height:14px;
+            border-radius: 100px;
+            position: absolute;
+            z-index: 10;
+            float:left;
+            top:40px;
+            left:45px;
+            
+        }
+        
+        .reye{
+            background-color: #5662ff;
+            width: 14px;
+            height:14px;
+            border-radius: 100px;
+            position: absolute;
+            z-index: 10;
+            float:left;
+            top:40px;
+            left:100px;
+            
+        }
+        
+        .mouth{
+			background-color:transparent;
+            color:transparent;
+            float: left;
+            position:absolute;
+            z-index: 4;
+			width: 100px;
+			height: 100px;
+			border-radius: 140px;
+            top:30px;
+            left:30px;
+            border:solid 10px #5662ff;
+            
+        }
+        
+        .cover{
+            background-color: #fffc00;
+            float:left;
+            width:120px;
+            height:67px;
+            position:absolute;
+            top:30px;
+            left:20px;
+            z-index: 5;
+        }
+    
+
+
+        .x {
+          animation: x var(--x-speed) linear infinite alternate;
+        }
+        .x2 {
+          animation: x2 var(--x-speed) linear infinite alternate;
+        }
+        .y {
+          animation: y var(--y-speed) linear infinite alternate;
+        }
+
+    
+        @keyframes x {
+          100% {
+            transform: translateX(calc(100vw - var(--width)));
+
+          }
+        }
+        @keyframes x2{
+          100% {
+            transform: translateX(calc(-100vw + var(--width)));
+          }
+        }
+
+        @keyframes y {
+          100% {
+            transform: translateY(calc(100vh - var(--width)));
+
+          }
+        }
+    
+    
+        @keyframes y2 {
+          100% {
+            transform: translateY(calc(-100vh - var(--width)));
+          }
+        }
+
+ 
+    
+
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes mymove {
+  from {top: -500vh;}
+  to {top: 100vh;}0
+}
+
+@keyframes mymove {
+  from {top: -500vh;}
+  to {top: 100vh;}
+    
+    }
+	
+	
+	
+	
+	
+	
+	
+	  .rules{
+		font-size:45px;
+		font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+		line-height: 55px;
+		color:#fff;
+		//background-color: darkolivegreen;
+		  
+        width:70%;
+        float:left;
+        height: auto;
+        
+        position: relative;
+        top: 50%;
+        left: 50%;
+        z-index: 1;
+        margin-right: 50%;
+        transform: translate(-50%, -50%);
+    }
+	
+    
+		.star_yellow{
+			width:auto;
+			height: auto;
+			position: absolute;
+			top: 55%;
+			left: 70%;	
+	}
+	
+	
+		.flower_green{
+			width:auto;
+			height: auto;
+			position: absolute;
+			top: 20%;
+			left: 5%;	
+	}
+	
+	
+	c, c:link, c:visited {
+		
+		  text-decoration: none;
+
+	}
+	c:link {
+		  text-decoration: none;
+		color:#fff;
+
+	}
+	c:visited {
+  text-decoration: none;
+}
+	c img {
+    display: none;
+}
+	c:hover img {
+		position:absolute;
+		display: block;
+		width:45%;
+		height:45%;
+		left:55%;
+		top:8%;
+}
+	c:hover {
+		color:#fdb2ce;
+	}
+
+	d, d:link, d:visited {
+		
+		  text-decoration: none;
+
+	}	
+	d:link {
+		  text-decoration: none;
+		color:#fff;
+
+	}
+	d:visited {
+ 	 text-decoration: none;
+}
+	d img {
+  		 display: none;
+}
+	d:hover img {
+	  	position:absolute;
+   		display: block;
+		width:45%;
+		height:45%;
+		left:30%;
+		top:10%;
+}
+	d:hover {
+		color:#fdb2ce;
+	}
+	
+	e, e:link, e:visited {
+		
+		  text-decoration: none;
+
+	}	
+	e:link {
+		  text-decoration: none;
+		color:#fff;
+
+	}
+	e:visited {
+ 	 text-decoration: none;
+}
+	e img {
+  		 display: none;
+}
+	e:hover img {
+	  	position:absolute;
+   		display: block;
+		width:45%;
+		height:45%;
+		left:45%;
+		top:10%;
+}
+	e:hover {
+		color:#fdb2ce;
+	}
+	
+	f, f:link, f:visited {
+		
+		  text-decoration: none;
+
+	}	
+	f:link {
+		  text-decoration: none;
+		color:#fff;
+
+	}
+	f:visited {
+ 	 text-decoration: none;
+}
+	f img {
+  		 display: none;
+}
+	f:hover img {
+	  	position:absolute;
+   		display: block;
+		width:45%;
+		height:45%;
+    	left:30%;
+		top:18%;
+}
+	f:hover {
+		color:#fdb2ce;
+	}
+
+	g, g:link, g:visited {
+		
+		  text-decoration: none;
+
+	}	
+	g:link {
+		  text-decoration: none;
+		color:#fff;
+
+	}
+	g:visited {
+ 	 text-decoration: none;
+}
+	g img {
+  		 display: none;
+}
+	g:hover img {
+	  	position:absolute;
+		width:45%;
+		height:45%;
+   		display: block;
+    	left:55%;
+		top:25%;
+}
+	g:hover {
+		color:#fdb2ce;
+	}
+
+	h, h:link, h:visited {
+		
+		  text-decoration: none;
+
+	}	
+	h:link {
+		  text-decoration: none;
+		color:#fff;
+
+	}
+	h:visited {
+ 	 text-decoration: none;
+}
+	h img {
+  		 display: none;
+}
+	h:hover img {
+	  	position:absolute;
+   		display: block;
+		width:45%;
+		height:45%;
+    	left:25%;
+		top:43%;
+}
+	h:hover {
+		color:#fdb2ce;
+	}
+	
+	i, i:link, i:visited {
+		
+		  text-decoration: none;
+
+	}	
+	i:link {
+		  text-decoration: none;
+		color:#fff;
+
+	}
+	i:visited {
+ 	 text-decoration: none;
+}
+	i img {
+  		 display: none;
+}
+	i:hover img {
+	  	position:absolute;
+   		display: block;
+		width:45%;
+		height:45%;		
+    	left:65%;
+		top:48%;
+}
+	i:hover {
+		color:#fdb2ce;
+	}
+	
+	j, j:link, j:visited {
+		
+		  text-decoration: none;
+
+	}	
+	j:link {
+		  text-decoration: none;
+		color:#fff;
+
+	}
+	j:visited {
+ 	 text-decoration: none;
+}
+	j img {
+  		 display: none;
+}
+	j:hover img {
+	  	position:absolute;
+   		display: block;
+		width:45%;
+		height:45%;		
+    	left:60%;
+		top:55%;
+}
+	j:hover {
+		color:#fdb2ce;
+	}
+	
+	k, k:link, k:visited {
+		
+		  text-decoration: none;
+
+	}	
+	k:link {
+		  text-decoration: none;
+		color:#fff;
+
+	}
+	k:visited {
+ 	 text-decoration: none;
+}
+	k img {
+  		 display: none;
+}
+	k:hover img {
+	  	position:absolute;
+   		display: block;
+		width:45%;
+		height:45%;		
+    	left:50%;
+		top:5%;
+}
+	k:hover {
+		color:#fdb2ce;
+	}
+	
+	l, l:link, l:visited {
+		  text-decoration: none;
+
+	}	
+	l:link {
+		  text-decoration: none;
+		color:#fff;
+
+	}
+	l:visited {
+ 	 text-decoration: none;
+}
+	l img {
+  		 display: none;
+}
+	l:hover img {
+	  	position:absolute;
+   		display: block;
+		width:45%;
+		height:45%;
+		left:25%;
+		top:10%;
+}
+	l:hover {
+		color:#fdb2ce;
+	}
+	
+	m, m:link, m:visited {
+		  text-decoration: none;
+
+	}	
+	m:link {
+		  text-decoration: none;
+		color:#fff;
+
+	}
+	m:visited {
+ 	 text-decoration: none;
+}
+	m img {
+  		 display: none;
+}
+	m:hover img {
+	  	position:absolute;
+   		display: block;
+		width:45%;
+		height:45%;		
+    	left:-10%;
+		top:10%;
+}
+	m:hover {
+		color:#fdb2ce;
+	}
+	
+	n, n:link, n:visited {
+		
+		  text-decoration: none;
+
+	}	
+	n:link {
+		  text-decoration: none;
+		color:#fff;
+
+	}
+	n:visited {
+ 	 text-decoration: none;
+}
+	n img {
+  		 display: none;
+}
+	n:hover img {
+	  	position:absolute;
+   		display: block;
+		width:45%;
+		height:45%;
+		left:40%;
+		top:40%;
+}
+	n:hover {
+		color:#fdb2ce;
+	}
+	
+	o, o:link, o:visited {
+		
+		  text-decoration: none;
+
+	}	
+	o:link {
+		  text-decoration: none;
+		color:#fff;
+
+	}
+	o:visited {
+ 	 text-decoration: none;
+}
+	o img {
+  		 display: none;
+}
+	o:hover img {
+	  	position:absolute;
+   		display: block;
+		width:45%;
+		height:45%;
+		left:50%;
+		top:60%;
+}
+	o:hover {
+		color:#fdb2ce;
+	}
+	
+	p, p:link, p:visited {
+		
+		  text-decoration: none;
+
+	}	
+	p:link {
+		  text-decoration: none;
+		color:#fff;
+
+	}
+	p:visited {
+ 	 text-decoration: none;
+}
+	p img {
+  		 display: none;
+}
+	p:hover img {
+	  	position:absolute;
+   		display: block;
+		width:45%;
+		height:45%;
+		left:40%;
+		top:55%;
+}
+	p:hover {
+		color:#fdb2ce;
+	}
+	
+	q, q:link, q:visited {
+		
+		  text-decoration: none;
+
+	}	
+	q:link {
+		text-decoration: none;
+		color:#fff;
+
+	}
+	q:visited {
+ 	 text-decoration: none;
+}
+	q img {
+  		 display: none;
+}
+	q:hover img {
+	  	position:absolute;
+   		display: block;
+		width:45%;
+		height:45%;
+		left:20%;
+		top:40%;
+}
+	q:hover {
+		color:#fdb2ce;
+	}
+	
+</style>    
+</head>
+
+<body>
+	<iframe src="silence.mp3" allow="autoplay" id="audio" style="display: none"></iframe>
+
+	
+	
+
+<audio src="rupaul_song.mp3" autoplay>
+<p>If you are reading this, it is because your browser does not support the audio element.     </p>
+<embed src="rupaul_song.mp3" width="180" height="90" hidden="true" />
+</audio>		
+
+	
+    <div class="box1">
+        <div class="title"> <img src="header.gif" width="1060" height="640"> 
+        </div>
+		<div class="orange_flower"> <img src="flower_orange.gif" width="270" height="270"></div>
+		<div class="green_cloud"> <img src="cloud_green.gif" width="270" height="270"></div>
+
+	
+	
+	
+	
+	</div>
+
+<div class="circle-wrap x">
+  <div class="circle y">
+    
+        <div class="leye"></div>
+        <div class="reye"></div>
+        
+        <div class="cover"></div>
+        <div class="mouth"></div>
+
+    
+            
+    
+    </div>
+
+    
+</div>
+
+  
+        
+    
+    <div class="box2">
+		<div class="rules"><p1>
+			
+			<div class="rule01"> <c href="#">RuPaul uses a catchphrase / name pun<img src="rupaul_01.gif"></c></div>
+			<d href="#">Hieeeeeeeee<img src="rupaul_02.gif"></d><br/>
+			<e href="#">Tragic backstory / Cries<img src="rupaul_03.gif"></e><br/>
+			<f href="#">Brand / Prize<img src="rupaul_04.gif"></f><br/>
+			<g href="#">Someone can’t sew / Hot glues<img src="rupaul_05.gif"></g><br/>
+			<h href="#">Someone is nude but says they’re “Keeping It Real”<img src="rupaul_06.gif"></h><br/>
+			<i href="#">Someone can’t contour / Takes off her wig<img src="rupaul_07.gif"></i><br/>
+			<j href="#">Mortal enemies have to work together<img src="rupaul_08.gif"></j><br/>
+			<k href="#">Breast plate contacts / A hot queen wears next to nothing<img src="rupaul_09.gif"></k><br/>
+			<l href="#">Argument about “True Art of Drag”<img src="rupaul_10.gif"></l><br/>
+			<m href="#">Ru wears lime green<img src="rupaul_11.gif"></m><br/>
+			<n href="#">Man-drag<img src="rupaul_12.gif"></n><br/>
+			<o href="#">Drop / split<img src="rupaul_13.gif"></o><br/>
+			<p href="#">Bitches be shady<img src="rupaul_14.gif"></p>
+			<q href="#">Gay<img src="rupaul_15.gif"></q>
+		</p1></div>
+
+    	<div class="star_yellow"> <img src="star_yellow.gif" width="400" height="400"></div>
+		<div class="flower_green"> <img src="flower_green.gif" width="400" height="400"></div>
+
+
+    
+    </div>      
+    
+    
+    
+</body>
+</html>
